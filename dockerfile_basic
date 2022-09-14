@@ -1,0 +1,4 @@
+FROM openjdk:17.0.2-slim
+VOLUME /tmp
+COPY target/*.jar votingsystem.jar
+ENTRYPOINT ["java","-jar","/votingsystem.jar"]
