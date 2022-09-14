@@ -1,0 +1,63 @@
+logging:
+  pattern:
+    console: '%d{MM.dd-HH:mm:ss.SSS} | %-12.12thread | %highlight(%-5.5level) | %30.30logger{30}:%4.4line{4} | %msg%n'
+  level:
+    #root: DEBUG
+    com.com.simonov.voting: DEBUG
+    org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver: DEBUG
+    org.springframework.cache: TRACE
+
+spring:
+  datasource:
+   #tcp: jdbc:h2:tcp://localhost:9092/mem:voting
+    url: jdbc:h2:mem:voting
+    username: sa
+    password:
+
+  sql:
+    init:
+      mode: always
+      schema-locations: 'classpath:db/testDb.sql'
+
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc.batch_size: 20
+        default_batch_fetch_size: 20
+
+  cache:
+    cache-names: restaurant
+    caffeine.spec: 'maximumSize=1,expireAfterAccess=30s'
+
+  jackson:
+    visibility:
+      field: any
+      getter: none
+      setter: none
+      is-getter: none
+
+server:
+  port: 8080
+  shutdown: graceful
+
+  servlet:
+    encoding:
+      charset: UTF-8 # Charset of HTTP requests and responses. Added to the "Content-Type" header if not set explicitly
+      enabled: true # Enable http encoding support
+      force: true
+
+app:
+  limits:
+    time-vote-before: '11:00'
+  h2-server:
+    port: 9099
+  cache_ttl_min: 1

@@ -23,5 +23,20 @@ As a result, provide a link to github repository. It should contain the code, RE
 P.S.: Make sure everything works with latest version that is on github :)  
 P.P.S.: Assume that your API will be used by a frontend developer to build frontend on top of that.
 
------------------------------
 
+
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+  Run on  JDK17.  Type: `mvn spring-boot:run` in project root directory.
+
+Application available on 8080 port
+
+[Local SWAGGER API documentation](http://localhost:8080/swagger-ui.html)
+
+
+###  Authorization available
+```sh
+as user -> user@yandex.ru / password
+as admin -> admin@gmail.com / admin
+```
