@@ -1,5 +1,6 @@
-package com.simonov.voting.controller;
+package com.simonov.voting.util;
 
+import com.simonov.voting.controller.AuthUser;
 import com.simonov.voting.model.User;
 import lombok.experimental.UtilityClass;
 import org.springframework.security.core.Authentication;

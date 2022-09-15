@@ -1,8 +1,8 @@
 package com.simonov.voting.util.validation;
 
 import com.simonov.voting.controller.HasIdAndEmail;
-import com.simonov.voting.controller.SecurityUtil;
 import com.simonov.voting.repository.UserRepository;
+import com.simonov.voting.util.SecurityUtil;
 import lombok.AllArgsConstructor;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
