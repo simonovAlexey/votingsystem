@@ -1,4 +1,4 @@
-package com.simonov.voting;
+package com.simonov.voting.controller;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.util.Assert;

@@ -1,6 +1,6 @@
 package com.simonov.voting.util.validation;
 
-import com.simonov.voting.HasId;
+import com.simonov.voting.controller.HasId;
 import com.simonov.voting.error.IllegalRequestException;
 import com.simonov.voting.model.Role;
 import com.simonov.voting.model.User;

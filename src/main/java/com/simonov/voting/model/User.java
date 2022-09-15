@@ -1,7 +1,7 @@
 package com.simonov.voting.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.simonov.voting.HasIdAndEmail;
+import com.simonov.voting.controller.HasIdAndEmail;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

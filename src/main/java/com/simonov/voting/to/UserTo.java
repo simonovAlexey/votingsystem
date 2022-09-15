@@ -1,6 +1,6 @@
 package com.simonov.voting.to;
 
-import com.simonov.voting.HasIdAndEmail;
+import com.simonov.voting.controller.HasIdAndEmail;
 import lombok.EqualsAndHashCode;
 import lombok.Value;
 

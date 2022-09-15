@@ -1,6 +1,6 @@
 package com.simonov.voting.to;
 
-import com.simonov.voting.HasId;
+import com.simonov.voting.controller.HasId;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

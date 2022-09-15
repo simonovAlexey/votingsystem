@@ -1,7 +1,7 @@
 package com.simonov.voting.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.simonov.voting.HasId;
+import com.simonov.voting.controller.HasId;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import org.springframework.data.domain.Persistable;

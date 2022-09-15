@@ -1,6 +1,6 @@
 package com.simonov.voting.util.validation;
 
-import com.simonov.voting.HasIdAndEmail;
+import com.simonov.voting.controller.HasIdAndEmail;
 import com.simonov.voting.controller.SecurityUtil;
 import com.simonov.voting.repository.UserRepository;
 import lombok.AllArgsConstructor;
