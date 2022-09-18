@@ -8,7 +8,6 @@ import com.simonov.voting.util.validation.ValidationUtil;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
@@ -18,12 +17,13 @@ import java.net.URI;
 import java.util.List;
 
 import static org.springframework.http.HttpStatus.NO_CONTENT;
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.web.servlet.support.ServletUriComponentsBuilder.fromCurrentContextPath;
 
 @Slf4j
 @RestController
 @Tag(name = "User controller for admin auth")
-@RequestMapping(value = AdminController.REST_URL, produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = AdminController.REST_URL, produces = APPLICATION_JSON_VALUE)
 public class AdminController {
 
     static final String REST_URL = "/api/admin/users";
@@ -60,7 +60,7 @@ public class AdminController {
         return userService.findAll();
     }
 
-    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(consumes = APPLICATION_JSON_VALUE)
     public ResponseEntity<User> createWithLocation(@Valid @RequestBody User user) {
         log.info("Try create() {}", user);
         ValidationUtil.checkNew(user);
@@ -71,7 +71,7 @@ public class AdminController {
         return ResponseEntity.created(uriOfNewResource).body(created);
     }
 
-    @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/{id}", consumes = APPLICATION_JSON_VALUE)
     @ResponseStatus(NO_CONTENT)
     public void update(@Valid @RequestBody UserTo userTo, @PathVariable int id) {
         log.info("Try update() id: {} -> {} ", id, userTo);
