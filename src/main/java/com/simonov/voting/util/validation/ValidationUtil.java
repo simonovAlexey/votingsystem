@@ -4,15 +4,14 @@ import com.simonov.voting.controller.HasId;
 import com.simonov.voting.error.IllegalRequestException;
 import com.simonov.voting.model.Role;
 import com.simonov.voting.model.User;
+import lombok.experimental.UtilityClass;
 import org.springframework.core.NestedExceptionUtils;
 import org.springframework.lang.NonNull;
 
 import java.util.Collections;
 
+@UtilityClass
 public class ValidationUtil {
-
-    private ValidationUtil() {
-    }
 
     public static void checkNew(HasId hasId) {
         if (!hasId.isNew()) {
@@ -26,7 +25,6 @@ public class ValidationUtil {
         } else if (user.getRoles().contains(Role.ADMIN)) {
             throw new IllegalRequestException("User can't register as admin");
         }
-
     }
 
     public static void checkAndSetHasId(HasId hasId, int id) {
